@@ -7,8 +7,8 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-BOT_TOKEN =
-ADMIN_ID = 8285439649  # Замени на свой числовой Telegram ID
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+ADMIN_ID = 8285439649
 
 # Твои реальные реквизиты
 MY_IBAN = "ES50 1563 2626 3232 6996 2745"
