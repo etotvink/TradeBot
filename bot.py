@@ -1,3 +1,4 @@
+import os
 import asyncio
 import logging
 from aiogram import Bot, Dispatcher, F, types
@@ -6,7 +7,7 @@ from aiogram.fsm.context import FSMContext
 from aiogram.fsm.state import State, StatesGroup
 from aiogram.types import InlineKeyboardMarkup, InlineKeyboardButton
 
-BOT_TOKEN = "9173775093:AAFSG-4wP0BJz5pUA4MiaKowt4ZvSpAmFzs"
+BOT_TOKEN =
 ADMIN_ID = 8285439649  # Замени на свой числовой Telegram ID
 
 # Твои реальные реквизиты
