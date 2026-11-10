@@ -221,3 +221,19 @@ async def main():
 
 if __name__ == "__main__":
     asyncio.run(main())
+@dp.callback_query(F.data == "paid_clicked")
+async def process_paid_payment(callback: types.CallbackQuery):
+    # Отправляем подтверждение покупателю
+    await callback.message.answer(
+        "✅ Thank you! Your payment verification request has been sent to the creator."
+    )
+    
+    # Отправляем уведомление тебе (админу) в личку
+    await callback.bot.send_message(
+        ADMIN_ID, 
+        f"🔔 User @{callback.from_user.username} (ID: {callback.from_user.id}) clicked 'I Have Paid'!"
+    )
+    
+    # Убираем часики с кнопки
+    await callback.answer()
+    
